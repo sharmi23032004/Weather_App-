@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <!-- Header -->
+            <div class="header">
+                <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+            </div>
+
+            <!-- Search section -->
+            <div class="search-section">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+
+            <!-- Error message -->
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-circle"></i>
+                <span id="errorText"></span>
+            </div>
+
+            <!-- Loading spinner -->
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Weather display -->
+            <div class="weather-display" id="weatherDisplay">
+                <!-- Current weather -->
+                <div class="current-weather">
+                    <div class="city-info">
+                        <h2 id="cityName">City Name</h2>
+                        <p id="date">Date</p>
+                    </div>
+
+                    <div class="weather-main">
+                        <div class="temperature">
+                            <img id="weatherIcon" src="" alt="Weather icon">
+                            <div class="temp-value">
+                                <h1 id="temp">--°C</h1>
+                                <p id="weatherDescription">--</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-temperature-high"></i>
+                            <div>
+                                <p class="detail-label">Feels Like</p>
+                                <p class="detail-value" id="feelsLike">--°C</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <div>
+                                <p class="detail-label">Humidity</p>
+                                <p class="detail-value" id="humidity">--%</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <div>
+                                <p class="detail-label">Wind Speed</p>
+                                <p class="detail-value" id="windSpeed">-- km/h</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fas fa-gauge-high"></i>
+                            <div>
+                                <p class="detail-label">Pressure</p>
+                                <p class="detail-value" id="pressure">-- hPa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5-day forecast -->
+                <div class="forecast-section">
+                    <h3><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h3>
+                    <div class="forecast-container" id="forecastContainer">
+                        <!-- Forecast items will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
